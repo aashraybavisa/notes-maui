@@ -7,7 +7,7 @@ A simple and intuitive Notes application built with MAUI. This app allows users 
 
 Note List Page | Add Note Page | About Page   
 :-------------------------:|:-------------------------:|:-------------------------:
-| <img src="screenshots/ListPage.png" width="200px"> | <img src="screenshots/AddNotePage.png" width="200px"> | <img src="screenshots/AboutPage.png" width="200px"> |
+| <img src="screenshots/ListPage.png" width="250px"> | <img src="screenshots/AddNotePage.png" width="250px"> | <img src="screenshots/AboutPage.png" width="250px"> |
 
 ## Features
 
