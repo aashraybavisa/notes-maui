@@ -3,42 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.AllNotesPage"
              Title="Your Notes">
-    <!-- Styles -->
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="ListItemStyle"
-                   TargetType="StackLayout">
-                <Setter Property="Padding"
-                        Value="10"/>
-                <Setter Property="BackgroundColor"
-                        Value="{StaticResource Gray900}"/>
-            </Style>
-            <Style x:Key="TitleLabel"
-                   TargetType="Label">
-                <Setter Property="TextColor"
-                        Value="{StaticResource SmokeWhite}"/>
-                <Setter Property="FontSize"
-                        Value="22"/>
-                <Setter Property="FontAttributes"
-                        Value="Bold"/>
-            </Style>
-            <Style x:Key="DateLabel"
-                   TargetType="Label">
-                <Setter Property="TextColor"
-                        Value="{StaticResource Gray400}"/>
-                <Setter Property="FontSize"
-                        Value="14"/>
-            </Style>
-            <Style x:Key="Spacing1"
-                   TargetType="BoxView">
-                <Setter Property="HeightRequest"
-                        Value="10"/>
-                <Setter Property="BackgroundColor"
-                        Value="{StaticResource Gray900}"/>
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
@@ -62,12 +26,12 @@
         <!-- Define the appearance of each item in the list -->
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout Style="{StaticResource ListItemStyle}">
+                <StackLayout Style="{StaticResource AllNotesPage_ListItemStyle}">
                     <Label Text="{Binding Text}"
-                           Style="{StaticResource TitleLabel}"/>
-                    <BoxView Style="{StaticResource Spacing1}"/>
+                           Style="{StaticResource AllNotesPage_TitleLabel}"/>
+                    <BoxView Style="{StaticResource AllNotesPage_Spacing1}"/>
                     <Label Text="{Binding Date}"
-                           Style="{StaticResource DateLabel}"/>
+                           Style="{StaticResource AllNotesPage_DateLabel}"/>
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>

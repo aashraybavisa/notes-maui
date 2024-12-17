@@ -3,63 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.Views.NotePage"
              Title="Note">
-        <!-- Styles -->
-        <ContentPage.Resources>
-                <ResourceDictionary>
-                        <Style x:Key="MainStyle"
-                               TargetType="VerticalStackLayout">
-                                <Setter Property="Padding"
-                                        Value="10"/>
-                                <Setter Property="BackgroundColor"
-                                        Value="{StaticResource Gray900}"/>
-                        </Style>
-                        <Style x:Key="SaveButton"
-                               TargetType="Button">
-                                <Setter Property="BackgroundColor"
-                                        Value="{StaticResource SecondaryDarkText}"/>
-                                <Setter Property="FontSize"
-                                        Value="18"/>
-                                <Setter Property="TextColor"
-                                        Value="{StaticResource Gray950}"/>
-                        </Style>
-                        <Style x:Key="DeleteButton"
-                               TargetType="Button">
-                                <Setter Property="BackgroundColor"
-                                        Value="{StaticResource Secondary}"/>
-                                <Setter Property="FontSize"
-                                        Value="18"/>
-                                <Setter Property="TextColor"
-                                        Value="{StaticResource Gray950}"/>
-                        </Style>
-                        <Style x:Key="EditorStyle"
-                               TargetType="Editor">
-                                <Setter Property="HeightRequest"
-                                        Value="70"/>
-                                <Setter Property="BackgroundColor"
-                                        Value="{StaticResource Gray950}"/>
-                                <Setter Property="FontSize"
-                                                Value="18"/>
-                        </Style>
-                </ResourceDictionary>
-        </ContentPage.Resources>
-        <VerticalStackLayout Spacing="10"
-                             Style="{StaticResource MainStyle}"
-                             Margin="5">
-                <Editor x:Name="TextEditor"
-                        Style="{StaticResource EditorStyle}"
-                        Placeholder="Enter your note"
-                        Text="{Binding Text}"/>
+    <VerticalStackLayout
+        Style="{StaticResource NotePage_MainStyle}">
+        <Editor x:Name="TextEditor"
+                Style="{StaticResource NotePage_EditorStyle}"
+                Placeholder="Enter your note"
+                Text="{Binding Text}"/>
 
-                <Grid ColumnDefinitions="*,*,*,*"
-                      ColumnSpacing="4">
-                        <Button Text="Save"
-                                Grid.Column="5"
-                                Style="{StaticResource SaveButton}"
-                                Clicked="SaveButton_Clicked"/>
-                        <Button Grid.Column="0"
-                                Text="Delete"
-                                Style="{StaticResource DeleteButton}"
-                                Clicked="DeleteButton_Clicked"/>
-                </Grid>
-        </VerticalStackLayout>
+        <Grid ColumnDefinitions="*,*,*,*"
+              ColumnSpacing="4">
+            <Button Text="Save"
+                    Grid.Column="5"
+                    Style="{StaticResource NotePage_SaveButton}"
+                    Clicked="SaveButton_Clicked"/>
+            <Button Grid.Column="0"
+                    Text="Delete"
+                    Style="{StaticResource NotePage_DeleteButton}"
+                    Clicked="DeleteButton_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
 </ContentPage>
